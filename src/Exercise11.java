@@ -2,6 +2,7 @@ abstract class Shape{
     String color;
     public abstract void draw();
 
+    // equals есть у Object и так, если переопределяешь, то добавляй реализацию, иначе смысла нет
     public abstract boolean equals();
 }
 
@@ -14,12 +15,16 @@ class Circle extends Shape{
         System.out.println("Drawing circle with the coordinates " + this.coordinate1 +
                 " , " + this.coordinate2);
     }
+
     @Override
     public boolean equals(){
-        return true; //не уверен, что заглушку именно такую нужно указывать
+        return true;
+        //не уверен, что заглушку именно такую нужно указывать
+        // совершенно точно, это абсурд
     }
 
     public boolean equals(Circle circle){
+        // доброе утро, сравниваем строки через equals и вспоминаем про ссылочные типы
         return this.color == circle.color &&
                 this.coordinate1 == circle.coordinate1 &&
                 this.coordinate2 == circle.coordinate2;
@@ -32,6 +37,7 @@ class Circle extends Shape{
 }
 
 class Rectangle extends Shape{
+    // с каких пор прямоугольники определяются двумя координатами?
     int coordinate1, coordinate2;
     @Override
     public void draw(){

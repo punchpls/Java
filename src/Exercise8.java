@@ -86,6 +86,7 @@ public class Exercise8 {
                 AnimalArray[i].food = "Dry food";
                 AnimalArray[i].location = "Home";
             }
+            // условие всегда true
             else if (i % 2 != 0){
                 AnimalArray[i] = new Dog();
                 AnimalArray[i].food = "Canned food";

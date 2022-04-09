@@ -1,6 +1,8 @@
 public class Exercise5{
+    // ужасное название метода, ну да хуй с ним
     public static String recursion(int a, int b) {
         if (a > b) {
+            // а придумай пример, при котором a > b и одновременно a == b
             if (a == b) {
                 return Integer.toString(a);
             }

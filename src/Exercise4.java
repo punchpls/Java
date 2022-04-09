@@ -1,11 +1,14 @@
 class Reader{
 
+    // модификторы доступа?
+    // ID зачем?
     int ID;
     String surname, name, patronymic;
     String faculty;
     String birthDate;
     String mobileNumber;
 
+    // ID зачем, если он даже не присваивается никуда?
     Reader(int id, String surname, String name, String patronymic,
            String faculty, String birthDate, String mobileNumber){
         this.surname = surname;
@@ -23,9 +26,12 @@ class Reader{
                 " took " + bookAmount + " books.");
     }
 
+    // не bookList, а books. У тебя тут листа нет, используй терминологию языка осознанно
     public void takeBook(String... bookList){
+        // Нахуя ты это на 2 строки разбил?) аналогично в других методах
         System.out.print(this.surname + " " + this.name +
                 " took ");
+        // дублирование кода, даже идея выделяет косяк
         for (int i = 0; i < bookList.length; i++){
             System.out.print(bookList[i]);
             if (i != bookList.length-1){
@@ -40,6 +46,7 @@ class Reader{
     public void takeBook(Book... bookList){
         System.out.print(this.surname + " " + this.name +
                 " took ");
+        // дублирование кода
         for (int i = 0; i < bookList.length; i++){
             System.out.print(bookList[i].name);
             if (i != bookList.length-1){
@@ -89,6 +96,7 @@ class Reader{
 }
 
 class Book{
+    // модификторы доступа?
     String author;
     String name;
 

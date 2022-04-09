@@ -1,4 +1,5 @@
 class Person{
+    // модификаторы доступа?
     String fullName;
     int age;
 
@@ -22,6 +23,7 @@ class Person{
 
 public class Exercise2 {
     public static void main(String[] args) {
+        // переменные называем с строчной буквы
         Person P1 = new Person();
         Person P2 = new Person("Sergey", 27);
 

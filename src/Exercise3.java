@@ -1,6 +1,7 @@
 class Matrix{
     int column;
     int row;
+    // twodim понятно из типа, незачем совать это в название, как и array собственно
     double[][] twoDimArray = new double[row][column];
 
     Matrix (int rowNumber, int columnNumber){
@@ -9,6 +10,7 @@ class Matrix{
         this.twoDimArray = new double[row][column];
     }
 
+    // что значит ints в названии, если матрица типа double?
     public void generateMatrixInts(){
         for (int i = 0; i < row; i++){
             for (int j = 0; j < column; j++){
@@ -17,11 +19,13 @@ class Matrix{
         }
     }
 
+    // почему этот метод публичный?
     public static double getRandomNumber()
     {
         return (double) (Math.random() * 10) + 1;
     }
 
+    // для этого есть метод toString()
     public void printMatrix(){
         for (int i = 0; i < row; i++){
             for (int j = 0; j < column; j++){
@@ -48,6 +52,7 @@ class Matrix{
             }
         }
         else{
+            // для этого есть экспешны
             System.out.println("Error: matrixes have different dimensions");
         }
     }

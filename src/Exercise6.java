@@ -5,6 +5,9 @@ class Student{
     double averageMark;
 
     public int getScholarship(){
+        // без локальной переменной можно обойтись, используя сразу return
+        // а вообще это можно записать в 1 строку
+        // return this.averageMark == 5 ? 100 : 80;
         int sum;
         if (this.averageMark == 5){
             sum = 100;
@@ -16,6 +19,7 @@ class Student{
     }
 }
 
+// не выполнено условие отличия аспиранта от студента - наличие научной работы
 class Aspirant extends Student{
     public int getScholarship(){
         int sum;
@@ -33,11 +37,14 @@ class Aspirant extends Student{
 public class Exercise6{
     public static void main(String[] args) {
         Student St1 = new Aspirant();
+        // используем геттеры и сеттеры, привыкай
         St1.firstName = "Sergey";
         St1.lastName = "Sergeev";
         St1.group = "FMK";
         St1.averageMark = 4;
         System.out.println("Scholarship: " + St1.getScholarship());
+        // используй синтаксис
+        // Student[] students = {new Student(), new Aspirant()};
         Student[] Students = new Student[5];
         Students[0] = new Student();
         Students[1] = new Student();

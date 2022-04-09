@@ -1,16 +1,21 @@
 class Phone{
+    // почему protected?
     protected int number, model, weight;
+    // где отступы между методами?
     public void receiveCall(String name){
         System.out.println(name + " is calling");
     }
     public void receiveCall(String name, String callnumber){
         System.out.println(name + " is calling" + "\nnumber: " + callnumber);
     }
+    // этот метод вообще не понял зачем, а главное нахуя
     public String getNumber(String callnumber){
+        // зачем callingNumber?
         String callingNumber = callnumber;
         System.out.println("Calling number: " + callingNumber);
         return callingNumber;
     }
+
     public void sendMessage(String... numbers){
         //send the message to these numbers
         for (int i = 0; i < numbers.length; i++){
@@ -47,6 +52,6 @@ public class Exercise1{
         System.out.println(Ph3.model);
         System.out.println(Ph3.weight);
         Ph3.receiveCall("Jack", "375299990066");
-
+        // последний пункт (про JavaBean) не сделан
     }
 }
